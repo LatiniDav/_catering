@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+
+		<h2>ALL BUFFETS ADMIN</h2>
+
+		<div class="flexBox">
+			<div class="row">
+				<div class="detailsImg">
+					<img th:src="@{'/images/generalBuffet.jpg'}">
+				</div>
+				<div class="textCell">
+					<ul>
+						<div th:each="buffet : ${buffets}">
+							<li>
+								<a th:href="@{'/buffet/id/'+${buffet.id}}">
+									<span th:text="${buffet.nome}">Nome buffet</span>
+									<span><button><a th:href="@{'/deleteBuffet/'+${buffet.id}}">DELETE</a></button></span>
+									<span><button><a th:href="@{'/modifyBuffetFirst/'+${buffet.id}}">MODIFY</a></button></span>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<p><button><a th:href="@{/buffetFormAdmin}">ADD BUFFET</a></button></p>
+		<br></br>
+		<br></br>
+	</div>
+
+</body>
+
+</html>

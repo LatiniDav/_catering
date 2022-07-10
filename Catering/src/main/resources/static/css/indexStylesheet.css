@@ -1,0 +1,252 @@
+a:link{
+  color: maroon;
+  text-decoration: none;
+}
+
+.allBody{
+  margin: auto;
+  background-color: rgb(255 218 185 / 85%);
+  width: 90%;
+  transform: translateY(10%);
+}
+
+b{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+body{
+  background-color: orange;
+  background: url(/images/img.png) center;
+  background-attachment: fixed;
+}
+
+table{
+	width: 90%;
+	border-collapse: collapse;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+.buffetContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: row;
+}
+
+.buffet-item{
+  border-radius: 10px;
+}
+
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+#chefContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: row;
+}
+
+.chef-item{
+  align-items: center;
+  border-radius: 10px;
+  padding: 10%;
+}
+
+.descBuffet{
+  line-height: 1.5;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.firstP{
+  text-align: center;
+  color: maroon;
+  margin-top: 0px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+h1{
+  text-align: center;
+  font-size: 100px;
+  color: maroon;
+  font-family: fantasy;
+  margin-bottom: 0px;
+}
+
+h2{
+  text-align: center;
+  font-size: 80px;
+  color: maroon;
+  font-family: fantasy;
+  margin-bottom: 0px;
+}
+
+h3{
+  text-align: center;
+  font-size: 50px;
+  color: maroon;
+  font-family: fantasy;
+  margin-bottom: 0px;
+}
+
+h4{
+  font-size: 50px;
+  color: maroon;
+  font-family: fantasy;
+  margin-bottom: 0px;
+  margin-left: 60px;
+  
+}
+
+img {
+	margin-left:60px;	
+	max-width:400px;
+}
+
+#imgDescContainer{
+	display: flex;
+	padding-right: 20%;
+	padding: 5% 15% 0 15%;
+}
+
+.imgDesc-item{
+	border-radius: 10px;
+}
+
+.logo{
+  flex-grow: 1;
+  width: 25px;
+  margin: 10px 20px 10px 40px ;
+}
+
+p{
+	font-size: 20px;
+	margin-left:30px;
+}
+
+.centerDiv{
+	vertical-align: middle;
+}
+
+.pTop{
+	font-size: 15px;
+}
+
+li{
+	margin-left: 60px;
+}
+
+.paragTitle{
+  font-size: 35px;
+  padding-top: 50px;
+  margin-left: 50px;
+  color: maroon;
+  font-family: fantasy;
+}
+
+.roma3catering{
+  transform: translateY(40%);
+  margin-bottom: 120px;
+}
+
+td{
+	height: 35px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th{
+	height: 40px;
+    width: 160px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}
+
+#topPage{
+  display: flex;
+  margin: auto;
+  background-color: PeachPuff;
+  width: 90%;
+  transform: translateY(10%);
+
+}
+
+.topPageItem{
+  flex-grow: 2;
+  align-items: center;
+  margin: 10px 50px 10px 50px;
+  vertical-align: middle;
+}
+
+ul{
+  list-style-type: circle;
+  font-size: 20px;
+}
+
+
+
+
+
+
+.row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-orient: horizontal; 
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+    flex-direction: row;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;  
+    align-items: center;
+
+}
+
+.imageCell {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto; 
+
+    padding: 10px;
+    margin: 10px;
+
+    text-align: center;
+
+}
+
+.textCell {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto; 
+
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.detailsImg{
+	max-width: inherit;
+}

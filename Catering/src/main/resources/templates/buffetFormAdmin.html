@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+		<h2>ADD NEW BUFFET</h2>
+
+		<form th:action="@{/buffet}" method="POST" th:object="${buffet}" enctype="multipart/form-data">
+			<div th:if="${#fields.hasGlobalErrors()}">
+				<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+			</div>
+			<br></br>
+			<input type="text" th:field="*{nome}" placeholder="Nome..."/>
+			
+			<br></br>
+			<input type="text" th:field="*{descrizione}" placeholder="Descrizione..."/>
+			<div id="immB">
+				<label>Immagine Buffet: </label>
+				<div>
+					<input type="file" name="image" accept="image/png,image/jpeg,image/jpg" />
+				</div>
+			</div>
+
+			<div>
+				<span><button type="submit">Conferma</button></span>
+			</div>
+		</form>
+
+		<!--
+		<form th:action="@{/buffet}" method="post" th:object="${buffet}">
+			<div th:if="${#fields.hasGlobalErrors()}">
+				<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+			</div>
+			<br></br>
+			<div>
+				nome: <input type="text" th:field="*{nome}" />
+				<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+			</div>
+			<br></br>
+			<div>
+				descrizione: <input type="text" th:field="*{descrizione}" />
+				<div th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></div>
+			</div>
+			<br></br>
+			<div id="immC">
+				<label>Immagine Buffet: </label>
+				<div><input type="file" name="image" accept="image/png,image/jpeg,image/jpg" /></div>
+			</div>
+			<br></br>
+			<div>
+				<p class="topPageItem"><button type="submit">CONFIRM</button></p>
+			</div>
+		</form>
+		<!--<p><a th:href="@{'/chefAdmin/id/'+${chef.id}}">Return to the chef</p>-->
+		<br></br>
+		<br></br>
+	</div>
+</body>
+
+</html>

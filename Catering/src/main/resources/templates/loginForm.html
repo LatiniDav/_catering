@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+</head>
+
+<body>
+
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+		<form th:action="@{/login}" method="POST">
+			<h2>LOGIN</h2>
+			<div>
+				<div>
+					<b>Username:</b>
+					<span><input name="username" type="text" required /></span>
+				</div>
+				<br></br>
+				<div>
+					<b>Password:</b>
+					<span><input name="password" type="password" required /></span>
+				</div>
+				<div>
+					<b><button type="submit">Login</button></b>
+				</div>
+			</div>
+		</form>
+		<div>
+			<p><a th:href="@{/register}" th:text="#{index.register}">Sign in</a></p>
+			<p th:replace="fragments/base.html :: fondo(home='/')"></p>
+			<p><button><a href="/oauth2/authorization/google" target="_blank">Login with Google</a></button></p>
+		</div>
+		<br></br>
+		<br></br>
+	</div>
+
+</body>
+
+</html>

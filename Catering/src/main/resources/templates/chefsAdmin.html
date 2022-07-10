@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+
+		<h2>ALL CHEFS ADMIN</h2>
+
+		<div class="flexBox">
+			<div class="row">
+				<div class="detailsImg">
+					<img th:src="@{'/images/generalChef.jpeg'}">
+				</div>
+				<div class="textCell">
+					<ul>
+						<div th:each="chef : ${chefs}">
+							<li>
+								<a th:href="@{'/chefAdmin/id/'+${chef.id}}">
+									<span th:text="${chef.nome}+' '+${chef.cognome}">Chef name</span>
+									<span><button><a th:href="@{'/deleteChef/'+ ${chef.id}}">DELETE CHEF</a></button></span>
+								</a>
+							</li>
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<p class="topPageItem"><button><a th:href="@{/chefFormAdmin}">ADD CHEF</a></button></p>
+		<br></br>
+		<br></br>
+	</div>
+
+</body>
+
+</html>

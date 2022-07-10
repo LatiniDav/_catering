@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+		<h2><a th:text="${ingrediente.nome}"></h2>
+		<p><b>Name: </b><a th:text="${ingrediente.nome}"></p>
+		<p><b>Description: </b><a th:text="${ingrediente.descrizione}"></p>
+		<p><b>Origin: </b><a th:text="${ingrediente.origine}"></p>
+		<br></br>
+		<br></br>
+	</div>
+</body>
+
+</html>

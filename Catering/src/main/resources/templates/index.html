@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+		<!--<p class="topPageItem"><a th:href="@{/login}">LOGIN</a></p>-->
+		<p class="topPageItem">
+			<button><a th:href="@{/loginRegistration}">Login/SignIn</a></button>
+			<button><a th:href="@{/admin/indexAdmin}">Control Panel</a></button>
+		</p>
+	</div>
+
+	<div class="roma3catering">
+		<h1>ROMA3 CATERING</h1>
+		<p class="firstP">Catering by a student for students</p>
+	</div>
+
+	<div class="allBody">
+
+		<!--Start buffets part-->
+		<div id="imgDescContainer">
+			<div class="imgDesc-item">
+				<img th:src="@{'/images/generalBuffet.jpg'}" class="center">
+			</div>
+			<div class="imgDesc-item">
+				<h3><a th:href="@{/buffets}">OUR BUFFETS</a></h3>
+				<p class="descBuffet">These buffets have been created by our chefs to satisfy all your
+					preferences.<br>
+					With "Roma3Catering" you could choose your buffet, read many informations about the chef and, last
+					but not
+					least, discover all dishes' peculiarities.</p>
+
+			</div>
+		</div>
+		<!--End buffets part-->
+
+		<!--Start chefs part-->
+		<div id="imgDescContainer">
+			<div class="imgDesc-item">
+				<h3><a th:href="@{/chefs}">OUR CHEFS</a></h3>
+				<p class="descBuffet">Our Chefs revisit the most typical local recipes in the name of taste and
+					creativity:
+					the imagination in the kitchen adds that extra charm to the dishes that ignites
+					amazement and gratifies the palate.</p>
+			</div>
+			<div class="imgDesc-item">
+				<img th:src="@{'/images/generalChef.jpeg'}" class="center">
+			</div>
+		</div>
+		<!--End chefs part-->
+
+		<br></br>
+	</div>
+
+</body>
+
+</html>

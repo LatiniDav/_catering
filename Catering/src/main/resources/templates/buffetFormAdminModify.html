@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+		<h2>MODIFY BUFFET</h2>
+
+		<!--<form th:action="@{'/modifyBuffetSecond/'+${buffet.id}}" method="post" th:object="${buffet}">
+			<div th:if="${#fields.hasGlobalErrors()}">
+				<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+			</div>
+			<br></br>
+			<div>
+				nome: <input type="text" th:field="*{nome}" />
+				<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+			</div>
+			<br></br>
+			<div>
+				descrizione: <input type="text" th:field="*{descrizione}" />
+				<div th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></div>
+			</div>
+			<br></br>
+			<div>
+				<p class="topPageItem"><button type="submit">CONFIRM</button></p>
+			</div>
+		</form>
+		<br></br>-->
+		
+		<!--SIMONE-->
+
+		<form th:action="@{'/modifyBuffetSecond/' + ${buffet.id}}" method="POST" th:object="${buffet}">
+			<div th:if="${#fields.hasGlobalErrors()}">
+				<p th:each="err : ${#fields.globalErrors()}" th:text="${err}">...</p>
+			</div>
+
+			<div>
+				nome: <input type="text" th:field="*{nome}" />
+				<div th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></div>
+			</div>
+			<br></br>
+			<div>
+				descrizione: <input type="text" th:field="*{descrizione}" />
+				<div th:if="${#fields.hasErrors('descrizione')}" th:errors="*{descrizione}"></div>
+			</div>
+			<br></br>
+			
+			<h4>Modifica chef per questo nuovo buffet</h4>
+			<div><span id="selC">Seleziona chef:</span>
+				<select th:field="*{chef}">
+					<option value=""></option>
+					<option th:each="chef : ${chefs}" th:value="${chef.id}"
+						th:text="${chef.nome} + ' ' + ${chef.cognome}">
+					</option>
+				</select>
+			</div>
+
+			<h4>Modifica piatti per questo nuovo buffet</h4>
+			<div>
+				<ul>
+					<li th:each="piatto : ${piatti}">
+						<input type="checkbox" th:field="*{piatti}" th:value="${piatto.id}">
+						<label th:text="${piatto.nome}">piatto</label>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<p class="topPageItem"><button type="submit">CONFIRM</button></p>
+			</div>
+		</form>
+
+		<!--SIMONE FINE-->
+
+
+		<br></br>
+	</div>
+</body>
+
+</html>

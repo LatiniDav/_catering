@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+
+		<h2>ALL INGREDIENTS ADMIN<span th:text=${ingredienti.size}></span></h2>
+
+		<table border="1">
+			<colgroup id="a" span="3"></colgroup>
+			<thead>
+				<tr>
+					<th>NAME</th>
+					<th>ORIGIN</th>
+					<th>QUANTITY</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="ingrediente : ${ingredienti}">
+					<td th:text="${ingrediente.nome}"></td>
+					<td th:text="${ingrediente.origine}"></td>
+					<td th:text="${ingrediente.quantita}"></td>
+				</tr>
+
+			</tbody>
+
+		</table>
+		<br></br>
+		<br></br>
+	</div>
+
+</body>
+
+</html>

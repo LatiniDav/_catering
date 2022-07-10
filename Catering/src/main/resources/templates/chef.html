@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/indexStylesheet.css}">
+
+</head>
+
+<body>
+	<div id="topPage">
+		<img class="logo" src="/images/logo.png">
+		<div class="topPageItem">
+			<p>1° classificato Miglior CateringRoma 2022 </p>
+		</div>
+		<div class="topPageItem">
+			<div class=centerDiv>
+				<p class="pTop">Email: roma3catering@gmail.com</p>
+				<p class="pTop">Telephone: +39 3331234567</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="allBody">
+		<h2><a th:text="${chef.nome}+' '+${chef.cognome}"></h2>
+
+
+		<div class="flexBox">
+			<div class="row">
+				<div class="detailsImg">
+					<img th:src=@{'/images/chef'+${chef.id}+'.jpg'} />
+				</div>
+				<div class="textCell">
+					<p><b>Name: </b> <a th:text="${chef.nome}">Chef name</p>
+					<p><b>Surname: </b> <a th:text="${chef.cognome}">Chef surname</p>
+					<p><b>Nationality: </b> <a th:text="${chef.nazionalita}">Chef nationality</p>
+					<p><b>Description: </b> <a th:text="${chef.descrizione}">Chef description</p>
+
+				</div>
+			</div>
+
+			<div>
+				<h4>HIS BUFFETS</h4>
+			</div>
+			<ul>
+				<div th:each="buffet: ${chef.buffets}">
+					<li>
+						<a th:href="@{'/buffet/id/'+${buffet.id}}">
+							<ul th:text="${buffet.nome}">Buffet and desc buffet</ul>
+						</a>
+					</li>
+				</div>
+			</ul>
+			<br></br>
+			<br></br>
+		</div>
+</body>
+
+</html>
